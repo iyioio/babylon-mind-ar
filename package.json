@@ -5,6 +5,7 @@
     "scripts": {},
     "private": true,
     "dependencies": {
+        "@iyio/common": "^0.0.24",
         "@mediapipe/face_mesh": "^0.4.1633559619",
         "@msgpack/msgpack": "^2.8.0",
         "@nrwl/next": "15.2.1",
@@ -15,10 +16,12 @@
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "regenerator-runtime": "0.13.7",
+        "rxjs": "^7.5.7",
         "svd-js": "^1.1.1",
         "three": "^0.146.0",
         "tinyqueue": "^2.0.3",
-        "tslib": "^2.3.0"
+        "tslib": "^2.3.0",
+        "unique-names-generator": "^4.7.1"
     },
     "devDependencies": {
         "@nrwl/cli": "14.8.6",
@@ -35,6 +38,7 @@
         "@types/node": "16.11.7",
         "@types/react": "18.0.20",
         "@types/react-dom": "18.0.6",
+        "@types/three": "^0.146.0",
         "@typescript-eslint/eslint-plugin": "^5.36.1",
         "@typescript-eslint/parser": "^5.36.1",
         "babel-jest": "28.1.1",

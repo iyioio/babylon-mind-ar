@@ -1,1 +1,1 @@
-export * from './lib/ar-components';
+export * from './lib/FaceMask';

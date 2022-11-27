@@ -16,7 +16,7 @@
         "baseUrl": ".",
         "paths": {
             "@iyio/ar-components": ["packages/ar-components/src/index.ts"],
-            "@iyio/mind-ar-js": ["packages/mind-ar-js/src/index.ts"]
+            "@iyio/babylon-ar": ["packages/babylon-ar/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

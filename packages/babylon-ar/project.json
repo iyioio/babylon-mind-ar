@@ -1,0 +1,46 @@
+{
+    "name": "babylon-ar",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/babylon-ar/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nrwl/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/babylon-ar",
+                "main": "packages/babylon-ar/src/index.ts",
+                "tsConfig": "packages/babylon-ar/tsconfig.lib.json",
+                "assets": ["packages/babylon-ar/*.md"]
+            }
+        },
+        "publish": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "node tools/scripts/publish.mjs babylon-ar {args.ver} {args.tag}"
+            },
+            "dependsOn": [
+                {
+                    "projects": "self",
+                    "target": "build"
+                }
+            ]
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["packages/babylon-ar/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/babylon-ar"],
+            "options": {
+                "jestConfig": "packages/babylon-ar/jest.config.ts",
+                "passWithNoTests": true
+            }
+        }
+    },
+    "tags": []
+}
